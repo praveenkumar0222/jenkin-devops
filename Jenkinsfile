@@ -10,7 +10,7 @@ pipeline{
 				echo "Build"
 				echo"PATH - $PATH"
 				echo"BUILD_NUMBER - $env.BUILD_NUMBER"
-				echO"BUILD_ID - $env.BUILD_ID"
+				echo"BUILD_ID - $env.BUILD_ID"
 				echo"JOB_NAME - $env.JOB_NAME"
 				echo"BUILD_TAG - $env.BUILD_TAG"
 				echo"BUILD_URL - $env.BUILD_URL"
@@ -23,7 +23,7 @@ pipeline{
 				echo "Test"
 			}
 		}
-		stage ('ntergration Test') {
+		stage ('Intergration Test') {
 			steps {
 				echo "Intergration Test"
 			}
