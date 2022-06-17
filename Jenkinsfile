@@ -1,4 +1,8 @@
 pipeline{
+	  stage('com'){
+    def mvnHome = tool name: 'Apache Maven 3.8.5', type: 'maven'
+    sh "${mvnHome}/bin/mvn -B -DskipTests clean package"
+  }
 	agent any
 	//agent{docker{ image 'maven:3.8.6'}}
 	//agent{docker{ image 'node:13.8'}}
