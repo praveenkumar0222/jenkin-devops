@@ -2,11 +2,12 @@ pipeline{
 	agent any
 	//agent{docker{ image 'maven:3.8.6'}}
 	//agent{docker{ image 'node:13.8'}}
-	enviroment {
+	environment {
 		dockerHome= tool 'mydocker'
-		mavenHome = tool 'maven-3.8.6'
+		mavenHome= tool 'maven-3.8.6'
 		PATH="$dockerHome/bin:mavenHome/bin:$PATH"
 	}
+
 	stages {
 		stage ('Build') {
 			steps {
